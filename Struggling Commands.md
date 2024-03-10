@@ -36,4 +36,4 @@ Adding files to archive:
 tar -af archive.tar file2               - this will add file2 to the archive.tar file
 
 Extracting files:
-tar -xf archive.tar (now its important to note that id tar was packed with a directory such as tar -cf )
+tar -xf archive.tar (now its important to note that id tar was packed with a directory such as tar -cf archive.tar )
