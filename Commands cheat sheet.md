@@ -25,11 +25,11 @@ Extended regex:
 
 # (S)Tar
 List files within a tar file
-`tar -tf archive.tar`                       - this will output files within the archive.tar
+`tar -tf archive.tar`                          - this will output files within the archive.tar
 (t = list f = file)
 
 Creating tar archive with a file:
-`tar -cf archive.tar file1`                - this will output an archive.tar file with the file(s) specified. You                                                             can use a (relative and absolute) directory.
+`tar -cf archive.tar file1`                - this will output an archive.tar file with the file(s) specified.                                                                   You can use a (relative and absolute) directory.
 (c = create f = file)
 
 Adding files to archive:
@@ -41,4 +41,15 @@ Extracting files:
 ***note: if you want to ensure file permissions are preserved, you will need to run this as root***
 
 
-## 
+## Compressing
+to zip contents of a file you can use Bzip2, Gzip or Xzip (preloaded zip utilities)
+
+for zipping you can use any of:
+`gzip file1`          -this will result in file1 turning into file1.gz
+`bzip2 file1`        -this will result in file1 turning into file1.bz2
+`xz file1`             -this will result in file1 turning into file1.xz
+
+for unzipping you can use any of:
+`gunzip file1.gz`                   | this is also eq to `gzip --deco`
+`bunzip file1.bz2`                 |
+`xunzip file1.xz`                   |
