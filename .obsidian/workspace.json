@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e9951c245285a734",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "919c713c53079a0b",
@@ -86,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Commands cheat sheet.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Commands cheat sheet.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Commands cheat sheet.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -134,7 +146,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,9 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a288f27334dd948f",
+  "active": "e9951c245285a734",
   "lastOpenFiles": [
-    "Welcome.md",
-    "Commands cheat sheet.md"
+    "Commands cheat sheet.md",
+    "Untitled.md",
+    "Welcome.md"
   ]
 }
