@@ -80,3 +80,9 @@ for unzipping you can use any of:
 `gunzip file1.gz`                   | this is also eq to `gzip --decompress file1.gz`
 `bunzip file1.bz2`                 | this is also eq to `bzip2 --decompress file1.bz2`
 `xunzip file1.xz`                   | this is also eq to `xz --decompress file1.xz`
+
+# Redirection
+
+The `>` will redirect all output into the right e.g. `echo 'hello world > hello_wrld.txt` echo would normally output to the screen but instead the contents (hello world) is redirected to hello_wrld.txt. This will overwrite if the file exists already and all its contents
+
+The `>>` will append redirect into the right e.g. `echo 'hello' >> hello_wrld.txt` this will then add hello on a new line under hello world for the file (if you have done the previous first)
