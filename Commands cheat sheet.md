@@ -51,12 +51,17 @@ Star requires you to use the - before the options e.g. `star -cf` (whereas tar d
 Creating a star archive with a file:
 `star -cv file=/home/bob/archive.star file1`
 (where c is create and v is verbose)
-
+*if you want to use compression*
+`star -cv -z file=/home/bob/archive.star.gz file1`
+`star -cv -bz file=/home/bob/archive.star.bz2 file1`
 listing a star archive:
 `star -tv file=/home/bob/archive.star`
 
 extracting a star archive:
-``
+`star -xv file=/home/bob/archive.star`
+*or to set directory output*
+`star -xv file=/home/bob/archive.star -C /tmp/`
+***decompression is automatic again so no need to apply any extra flags to unpack and decompress archive.star.gz/ bz2***
 
 # Compressing
 to zip contents of a file you can use Bzip2, Gzip or Xzip (preloaded zip utilities)
