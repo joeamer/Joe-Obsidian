@@ -25,15 +25,20 @@ Extended regex:
 
 # (S)Tar
 List files within a tar file
-tar -tf archive.tar                       - this will output files within the archive.tar
+`tar -tf archive.tar`                       - this will output files within the archive.tar
 (t = list f = file)
 
 Creating tar archive with a file:
-tar -cf archive.tar file1                - this will output an archive.tar file with the file(s) specified. You                                                             can use a (relative and absolute) directory.
+`tar -cf archive.tar file1`                - this will output an archive.tar file with the file(s) specified. You                                                             can use a (relative and absolute) directory.
 (c = create f = file)
 
 Adding files to archive:
-tar -af archive.tar file2               - this will add file2 to the archive.tar file
+`tar -af archive.tar file2`               - this will add file2 to the archive.tar file
 
 Extracting files:
-tar -xf archive.tar (now its important to note that id tar was packed with a directory such as tar -cf archive.tar )
+`tar -xf archive.tar` (now its important to note that id tar was packed with a relative directory such as `tar -cf archive.tar Documets/` will result in extracting into the 'current directory'/Documents/file1)
+`tar -xf archive.tar --directory /tmp/` will result in extracting to the directory specified rather than the one you are in
+***note: if you want to ensure file permissions are preserved, you will need to run this as root***
+
+
+## 
