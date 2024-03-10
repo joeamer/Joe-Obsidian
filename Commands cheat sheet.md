@@ -31,8 +31,11 @@ List files within a tar file
 Creating tar archive with a file:
 `tar -cf archive.tar file1`                - this will output an archive.tar file with the file(s) specified.                                                                   You can use a (relative and absolute) directory.
 (c = create f = file)
-you can also use zipping utilities with tar
-
+*you can also use zipping utilities with tar*
+`tar -czf archive.tar.gz file1`
+`tar -cjf archive.tar.bz2 file1`
+`tar -cJf archive.tar.xz file1`
+`tar -caf archive.tar.gz file1`        -this is the auto compress flag and will compress with the                                                                    matching extension.
 Adding files to archive:
 `tar -af archive.tar file2`               - this will add file2 to the archive.tar file
 
@@ -40,7 +43,7 @@ Extracting files:
 `tar -xf archive.tar` (now its important to note that id tar was packed with a relative directory such as `tar -cf archive.tar Documets/` will result in extracting into the 'current directory'/Documents/file1)
 `tar -xf archive.tar --directory /tmp/` will result in extracting to the directory specified rather than the one you are in
 ***note: if you want to ensure file permissions are preserved, you will need to run this as root***
-
+***Another note: xf will work on zipped archives as well. It will automatically use the correct utility to decompress and extract***
 
 # Compressing
 to zip contents of a file you can use Bzip2, Gzip or Xzip (preloaded zip utilities)
