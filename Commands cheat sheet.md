@@ -7,14 +7,15 @@ options to learn:
 	-v     will preform inverse match search
 	-w    will perform a match to the word on its own and not include the string pattern in other           words 
 	-o    will not display context (line) around the search and will display the match on its own
-Basic regex:
+(search condition) Basic regex:
 	`^`      (example context `'^sam'`) will display search terms beginning with sam
 	`$`      (example context `'sam$'`) will display search terms ending with sam
 	`.`      (example context `'sa.'`) will display search terms with sa and exactly 1 *any* random character (cannot be void of characters or whitespace)
      `\`      (example context  `'\.'`) will search for the special character that proceeds backslash. this will allow you to search for period, asterisk etc. without accidentally searching for all character.
      `*`     (example context `'let*'`) will match the character that precedes the asterisk any number of times, including 0. this will match le, let, lett, lettt etc.
      **note**: a combination use case `'/.*/` would search for terms that match a directory structure / following any number of any characters and then closing with another /
-Extended regex:
+(search condition) Extended regex:
+*note: egrep is best used altogether as it will will allow all of the extended expressions without the need of the -e option*
      `{}`   (example context `'0{1,3}'`) will search for the preceding character within the range in the syntax of {min,max}. The example will search for 0 within 0 and 000 and not match absent or exceeding 4. you can set just a minimum or just a maximum. A single value {*n*} will search for exactly *n* times.
      `?`    (example context `'disabled?'`) will make the preceding character *optional* which, in the context will search for disable or disabled
      `|`    (example context `'enable|disable'`) will search for either term on either side of the pipe operation, both will match
