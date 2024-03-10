@@ -45,6 +45,19 @@ Extracting files:
 ***note: if you want to ensure file permissions are preserved, you will need to run this as root***
 ***Another note: xf will work on zipped archives as well. It will automatically use the correct utility to decompress and extract***
 
+Using star:
+Star requires you to use the - before the options e.g. `star -cf` (whereas tar doesn't actually require you to), also, to specify the file you need to use `file=path/to/archive.star file`
+
+Creating a star archive with a file:
+`star -cv file=/home/bob/archive.star file1`
+(where c is create and v is verbose)
+
+listing a star archive:
+`star -tv file=/home/bob/archive.star`
+
+extracting a star archive:
+``
+
 # Compressing
 to zip contents of a file you can use Bzip2, Gzip or Xzip (preloaded zip utilities)
 
