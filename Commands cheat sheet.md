@@ -91,27 +91,14 @@ The `1>` will redirect standard output to the right, so this will do the same re
 
 The `2>` will redirect standard error to the right. You can use this if you are again searching with grep and want to display on the screen this time. If you want to hide the error lines you can do `grep -r 'bob' /home 2> /dev/null/` . This will display all matching terms and the potential error will be redirected to a special folder location which will essentially put it to a null output... Straight to the shadow realm.
 
-you can use multiple redirections at the same time under the similar syntax of: `grep -r 'bob' /home 1>output.txt 2>errors.txt` 
+*you can use multiple redirections at the same time under the similar syntax of: `grep -r 'bob' /home 1>output.txt 2>errors.txt`* 
 
-If you want to redirect all output you will need to do: ``grep -r 'bob' /home >allout.txt 2>&1`
-this follows the logic of std out will go to the txt and then the std error will go to std out which goes to the txt again.
+*If you want to redirect all output you will need to do: ``grep -r 'bob' /home >allout.txt 2>&1`*
+*this follows the logic of std out will go to the txt and then the std error will go to std out which goes to the txt again.*
 
 The `<` can be used to redirect files to functions such as `sendmail someone@example.com < emailcontent.txt` this example 'tricks' the sendmail function that the text input, you would normally type, is the text file with the pre-made content
 
-You can use `<<` to add The here document is used when one wants to give multiple lines of input to the command or script.
+You can use `<<` to to give multiple lines of input to the command or script. Syntax: `command <<EOF`
+example `cat > output.txt <<EOF` Here,  the redirection between the cat command and the output.txt text file which means the output of the cat command will be sent to the file. Then, I used << with the EOF delimiter which will let me write multiple lines and as soon as I type EOF, it will stop the command.
 
-And to use it, you'd have to follow the simple syntax:
-
-command <<DELIMITER
-Here, the DELIMITER is used two times.
-
-Once in the command which you saw above.
-
-And in the end when you're done adding lines and want to save the changes. The DELIMITER can be any string of characters but I would recommend using END as it represents the meaning much better!
-
-Now, let's have a look at a simple example:
-
-cat > output.txt <<END
-Here, I have used the redirection between the cat command and the output.txt text file which means the output of the cat command will be sent to the file.
-
-Then, I used << with the END delimiter which will let me write multiple lines and as soon as I type END, it will stop the command.
+The here string `<<<` is used when one wants to input one line of stings to a script or a command. To use the `<<<,` you'd have to follow the given command syntax: `command <<< "string"` such as `bc <<< 1+2+3+4` which would return 10 rather than opening the calculator program and entering it
