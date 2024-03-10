@@ -85,4 +85,10 @@ for unzipping you can use any of:
 
 The `>` will redirect all output into the right e.g. `echo 'hello world > hello_wrld.txt` echo would normally output to the screen but instead the contents (hello world) is redirected to hello_wrld.txt. This will overwrite if the file exists already and all its contents
 
-The `>>` will append redirect into the right e.g. `echo 'hello' >> hello_wrld.txt` this will then add hello on a new line under hello world for the file (if you have done the previous first)
+The `>>` will append redirect into the right e.g. `echo 'hello' >> hello_wrld.txt` this will then add hello on a new line under hello world for the file (if you have done the previous first). This will create the file if it doesn't exist
+
+The `1>` will redirect standard output to the right, so this will do the same result as `>` example but in a situation where you are searching with grep in a folder structure where you don't have permissions to some of the files, and want to save the results to a file (for example) the error lines indicating insufficient permissions will be filtered out and display on the screen but the rest will be stored.
+
+The `2>` will redirect standard error to the right. You can use this if you are again searching with grep and want to display on the screen this time. If you want to hide the error lines you can do `grep -r 'bob' /home 2> /dev/null/` . This will display all matching terms and the potential error will be redirected to a special folder location which will essentially put it to a null output... Straight to the shadow realm.
+
+you can use multiple redirections at the same time under the similar syntax of: `grep -r 'bob' /home 1>output.txt 2>errors.txt` 
