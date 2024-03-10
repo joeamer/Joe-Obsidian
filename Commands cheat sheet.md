@@ -31,6 +31,7 @@ List files within a tar file
 Creating tar archive with a file:
 `tar -cf archive.tar file1`                - this will output an archive.tar file with the file(s) specified.                                                                   You can use a (relative and absolute) directory.
 (c = create f = file)
+you can also use zipping utilities with tar
 
 Adding files to archive:
 `tar -af archive.tar file2`               - this will add file2 to the archive.tar file
@@ -41,7 +42,7 @@ Extracting files:
 ***note: if you want to ensure file permissions are preserved, you will need to run this as root***
 
 
-## Compressing
+# Compressing
 to zip contents of a file you can use Bzip2, Gzip or Xzip (preloaded zip utilities)
 
 for zipping you can use any of:
@@ -49,7 +50,11 @@ for zipping you can use any of:
 `bzip2 file1`        -this will result in file1 turning into file1.bz2
 `xz file1`             -this will result in file1 turning into file1.xz
 
+you can use the -k / --keep flag to keep the file after zipping `gzip -k file1`
+-l / --list will show the compression ratio and file sizes `gzip -l file1`
+-r will be used to compress directories `gzip -r Pictures/`
+
 for unzipping you can use any of:
-`gunzip file1.gz`                   | this is also eq to `gzip --deco`
-`bunzip file1.bz2`                 |
-`xunzip file1.xz`                   |
+`gunzip file1.gz`                   | this is also eq to `gzip --decompress file1.gz`
+`bunzip file1.bz2`                 | this is also eq to `bzip2 --decompress file1.bz2`
+`xunzip file1.xz`                   | this is also eq to `xz --decompress file1.xz`
