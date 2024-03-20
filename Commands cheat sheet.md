@@ -102,3 +102,5 @@ You can use `<<` to to give multiple lines of input to the command or script. Sy
 example `cat > output.txt <<EOF` Here,  the redirection between the cat command and the output.txt text file which means the output of the cat command will be sent to the file. Then, I used << with the EOF delimiter which will let me write multiple lines and as soon as I type EOF, it will stop the command.
 
 The here string `<<<` is used when one wants to input one line of stings to a script or a command. To use the `<<<,` you'd have to follow the given command syntax: `command <<< "string"` such as `bc <<< 1+2+3+4` which would return 10 rather than opening the calculator program and entering it
+
+# 
